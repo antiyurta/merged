@@ -10,7 +10,7 @@ exports.setCategory = async (req, res) => {
   await db.category
     .create(req.body)
     .then(() => res.status(200).send("Амжиллтай бүртгэлээ"))
-    .catch(() => res.status(500).send("Алдаа, Та дахин оролдоно уу"));
+    .catch(() => res.status(500).send("Алдаа, Та дахин оролдоно уу."));
 };
 exports.update = async (req, res) => {
   await db.category
