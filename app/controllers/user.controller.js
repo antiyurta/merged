@@ -40,6 +40,12 @@ exports.destroy = async (req, res) => {
       },
     })
     .then(() => {
+      db.feedback.destroy({
+        where: {
+          userId: req.params.id,
+        },
+        truncate: true,
+      });
       res.status(200).send("Амжиллтай Устгалаа");
     })
     .catch((err) => {
